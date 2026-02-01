@@ -4,7 +4,6 @@ import Noteboard from '../components/Noteboard'
 function Home() {
     return (
         <div>
-
             <Appbar />
             <Noteboard />
         </div>

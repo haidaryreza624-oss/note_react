@@ -10,8 +10,6 @@ function Noteboard() {
     const [open, setOpen] = React.useState(false);
     const [id_d, setid] = useState(0)
     const [fetching, setFethcing] = useState(false)
-
-
     const handleOpen = (id) => {
         setid(id)
         setOpen(true);
@@ -49,14 +47,12 @@ function Noteboard() {
     }, [fetching])
     return (
         <>
-
             <Masonry columns={3} spacing={1} sequential={true}>
                 {Notes.map((note, index) => {
                     return <NoteItem searchCategory={searchCategory} handleDelete={handleOpen} handleEdit={handleEdit} catagory={note.category} id={note.id} title={note.title} description={note.description} key={index} />
                 })}
             </Masonry>
             {open && <BasicModal open={open} handleClose={handleClose} handleDelete={handleDelete} />}
-
         </>
 
     )

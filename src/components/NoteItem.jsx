@@ -5,6 +5,7 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import Chip from '@mui/material/Chip';
 import Divider from '@mui/material/Divider';
 import EditIcon from '@mui/icons-material/Edit';
+import { Category } from '@mui/icons-material';
 
 
 function NoteItem({ title, description, id, catagory, searchCategory, handleDelete, handleEdit }) {
@@ -37,20 +38,14 @@ function NoteItem({ title, description, id, catagory, searchCategory, handleDele
                             mt: 'auto'        // pushes this Box to the bottom if using flex column parent
                         }}
                     >
+                        <Chip
 
-                        {catagory.map((cat, index) => (
-                            <Chip
-                                key={index}
-                                color="secondry"
-                                onClick={() => searchCategory(cat)}
-                                avatar={<Avatar>{cat[0]}</Avatar>}
-                                label={cat}
-                            />
-                        ))}
-
+                            color="secondry"
+                            onClick={() => searchCategory(catagory)}
+                            avatar={<Avatar>{catagory[0]}</Avatar>}
+                            label={catagory}
+                        />
                     </Box>
-
-
                 </CardContent>
                 <CardActions sx={{ justifyContent: 'flex-end' }}>
                     <Button variant="contained" startIcon={<DeleteIcon />} onClick={() => handleDelete(id)}>
