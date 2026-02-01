@@ -1,0 +1,56 @@
+{
+    "notes": [
+        {
+            "id": 1,
+            "category": [
+                "Work",
+                "Team",
+                "Planning",
+                "Study",
+                "HomeWork"
+            ],
+            "title": "Sprint Planning Meeting",
+            "description": "Reviewed backlog items for the upcoming sprint, estimated story points, and assigned tasks to team members. Agreed to prioritize bug fixes before starting new feature development."
+        },
+        {
+            "id": 2,
+            "category": [
+                "Personal",
+                "Health",
+                "Routine"
+            ],
+            "title": "Daily Routine Improvements",
+            "description": "Plan to wake up earlier, reduce screen time before bed, and add at least 20 minutes of reading each day. Focus on consistency rather than perfection."
+        },
+        {
+            "id": 3,
+            "category": [
+                "Learning",
+                "React",
+                "Programming"
+            ],
+            "title": "React Notes",
+            "description": "Studied React fundamentals including components, props, state, and hooks. Need to practice useEffect more and understand dependency arrays better."
+        },
+        {
+            "id": 4,
+            "category": [
+                "Ideas",
+                "App",
+                "Features"
+            ],
+            "title": "Notes App Features",
+            "description": "Possible features include search, filtering by category, dark mode, localStorage persistence, and markdown support for descriptions."
+        },
+        {
+            "id": 5,
+            "category": [
+                "Health",
+                "Fitness",
+                "Workout"
+            ],
+            "title": "Workout Plan",
+            "description": "Workout at least four times a week focusing on strength training and light cardio. Track progress weekly and adjust intensity as needed."
+        }
+    ]
+}
