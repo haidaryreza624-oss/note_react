@@ -8,13 +8,26 @@ import {
     MenuItem,
     Typography
 } from "@mui/material";
+import { Description } from "@mui/icons-material";
 
-function Forminput() {
+function Forminput({ isedit, id }) {
     const [formData, setFormData] = useState({
         title: "",
         category: "",
         description: ""
     });
+    if (isedit) {
+        useEffect(() => {
+            fetch(`http://localhost:8080/notes/${id}`)
+                .then(item => item.json())
+                .then(data => {
+                    console.log(data)
+                    setFormData({ title: data.title, category: data.category, description: data.description })
+                }
+                )
+        }, [])
+
+    }
     const navigate = useNavigate()
 
     const [validname, setValid] = useState(true)
@@ -52,16 +65,37 @@ function Forminput() {
             console.log("Form submitted:", formData);
         }
         // You can handle form submission logic here
-        fetch("http://localhost:8080/notes", {
-            method: 'POST',
-            headers: {
-                'Content-type': 'application/json'
-            },
-            body: JSON.stringify(formData)
-        })
-            .then(
+        if (isedit == false) {
+            fetch("http://localhost:8080/notes", {
+                method: 'POST',
+                headers: {
+                    'Content-type': 'application/json'
+                },
+                body: JSON.stringify(formData)
+            })
+                .then(
+                    navigate('/')
+                )
+        }
+        if (isedit) {
+            fetch(`http://localhost:8080/notes/${id}`, {
+                method: 'PATCH',
+                headers: {
+                    'Content-type': 'application/json'
+                },
+                body: JSON.stringify({
+                    title: formData.title,
+                    description: formData.description,
+                    category: formData.category
+
+                })
+            }).then(item => {
                 navigate('/')
-            )
+                console.log('Edit Done')
+            }
+            ).catch(e => console.log(e))
+        }
+
     };
     return (
         <Box

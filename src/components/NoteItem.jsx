@@ -6,6 +6,7 @@ import Chip from '@mui/material/Chip';
 import Divider from '@mui/material/Divider';
 import EditIcon from '@mui/icons-material/Edit';
 import { Category } from '@mui/icons-material';
+import { Link } from 'react-router-dom';
 
 
 function NoteItem({ title, description, id, catagory, searchCategory, handleDelete, handleEdit }) {
@@ -51,9 +52,11 @@ function NoteItem({ title, description, id, catagory, searchCategory, handleDele
                     <Button variant="contained" startIcon={<DeleteIcon />} onClick={() => handleDelete(id)}>
                         Delete
                     </Button>
+
                     <Button variant="contained" startIcon={<EditIcon />} onClick={() => handleEdit(id)}>
                         Edit
                     </Button>
+
 
                 </CardActions>
             </Card>

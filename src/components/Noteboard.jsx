@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react'
 import NoteItem from './NoteItem'
 import Masonry from '@mui/lab/Masonry';
 import BasicModal from './BasicModal.jsx'
+import { useNavigate } from 'react-router-dom';
 
 
 function Noteboard() {
@@ -34,9 +35,9 @@ function Noteboard() {
         setFethcing(true)
     }
 
-
+    const navigate = useNavigate()
     const handleEdit = (id) => {
-        console.log(id)
+        navigate(`/edit/${id}`)
     }
 
     useEffect(() => {

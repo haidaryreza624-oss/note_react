@@ -1,20 +1,14 @@
 {
   "notes": [
     {
-      "id": "41",
-      "category": "Health",
-      "title": "Stress Management",
-      "description": "Incorporate daily breathing exercises, short walks, and regular breaks during work hours to reduce stress and improve overall well-being."
-    },
-    {
       "id": "a33f",
       "title": "Play Game",
-      "category": "Other",
+      "category": "Work",
       "description": "Play your favorite game daily to sharpen your skills and enjoy your daily free time"
     },
     {
       "id": "fef7",
-      "title": "Take a Walk",
+      "title": "Take a Walk  for long time",
       "category": "Ideas",
       "description": "Walking for 10 mins daily will help you stay focuesd in the rest of the day so be my guest and enjoy your walk."
     }
