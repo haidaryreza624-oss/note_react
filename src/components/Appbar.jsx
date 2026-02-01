@@ -4,6 +4,7 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
+import { Link } from 'react-router-dom';
 function Appbar() {
     return (
         <Box sx={{ flexGrow: 1 }}>
@@ -12,9 +13,12 @@ function Appbar() {
                     <IconButton edge="start" color="inherit" aria-label="menu" sx={{ mr: 2 }}>
                         <MenuIcon />
                     </IconButton>
-                    <Typography variant="h6" color="inherit" component="div">
-                        Photos
-                    </Typography>
+                    <Link to={'/'} style={{ textDecoration: 'none', color: 'inherit' }}>
+                        <Typography onClick={() => window.location.reload()} variant="h6" color="inherit" component="div">
+
+                            Photos
+                        </Typography>
+                    </Link>
                 </Toolbar>
             </AppBar>
         </Box>

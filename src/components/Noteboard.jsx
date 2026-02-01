@@ -10,14 +10,23 @@ function Noteboard() {
     const [open, setOpen] = React.useState(false);
     const [id_d, setid] = useState(0)
     const [fetching, setFethcing] = useState(false)
+
+
     const handleOpen = (id) => {
         setid(id)
         setOpen(true);
     }
     const handleClose = () => setOpen(false);
+
     const searchCategory = (cat) => {
-        console.log(cat)
+        fetch(url)
+            .then(item => item.json())
+            .then(data => {
+                const a = data.filter(n => n.category.includes(cat))
+                setNotes(a)
+            })
     }
+
     const handleDelete = () => {
         handleClose()
 
@@ -26,6 +35,8 @@ function Noteboard() {
             .catch(e => console.log(e))
         setFethcing(true)
     }
+
+
     const handleEdit = (id) => {
         console.log(id)
     }
