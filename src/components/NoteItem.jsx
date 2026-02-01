@@ -7,13 +7,11 @@ import Divider from '@mui/material/Divider';
 import EditIcon from '@mui/icons-material/Edit';
 
 
-function NoteItem({ title, description, catagory }) {
-    const searchCategory = (w) => {
-        console.log(w)
-    }
+function NoteItem({ title, description,id, catagory, searchCategory, handleDelete,handleEdit }) {
+    
     return (
         <div>
-            <Card sx={{ width: 400, margin: 1 }}>
+            <Card sx={{ width: 450, margin: 1 }}>
                 <CardContent sx={{
                     display: 'flex',
                     flexDirection: 'column',
@@ -39,24 +37,26 @@ function NoteItem({ title, description, catagory }) {
                             mt: 'auto'        // pushes this Box to the bottom if using flex column parent
                         }}
                     >
+                        
                         {catagory.map((cat, index) => (
                             <Chip
                                 key={index}
-                                color="info"
+                                color="secondry"
                                 onClick={() => searchCategory(cat)}
                                 avatar={<Avatar>{cat[0]}</Avatar>}
                                 label={cat}
                             />
                         ))}
+                       
                     </Box>
 
 
                 </CardContent>
                 <CardActions sx={{ justifyContent: 'flex-end' }}>
-                    <Button variant="contained" startIcon={<DeleteIcon />}>
+                    <Button variant="contained" startIcon={<DeleteIcon />} onClick= {() => handleDelete(id)}>
                         Delete
                     </Button>
-                    <Button variant="contained" startIcon={<EditIcon />}>
+                    <Button variant="contained" startIcon={<EditIcon />} onClick= {() => handleEdit(id)}>
                         Edit
                     </Button>
 
