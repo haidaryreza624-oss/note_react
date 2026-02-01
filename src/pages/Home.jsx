@@ -5,7 +5,7 @@ function Home() {
     return (
         <div>
 
-             <Appbar /> 
+            <Appbar />
             <Noteboard />
         </div>
     )

@@ -1,56 +1,33 @@
 {
-    "notes": [
-        {
-            "id": 1,
-            "category": [
-                "Work",
-                "Team",
-                "Planning",
-                "Study",
-                "HomeWork"
-            ],
-            "title": "Sprint Planning Meeting",
-            "description": "Reviewed backlog items for the upcoming sprint, estimated story points, and assigned tasks to team members. Agreed to prioritize bug fixes before starting new feature development."
-        },
-        {
-            "id": 2,
-            "category": [
-                "Personal",
-                "Health",
-                "Routine"
-            ],
-            "title": "Daily Routine Improvements",
-            "description": "Plan to wake up earlier, reduce screen time before bed, and add at least 20 minutes of reading each day. Focus on consistency rather than perfection."
-        },
-        {
-            "id": 3,
-            "category": [
-                "Learning",
-                "React",
-                "Programming"
-            ],
-            "title": "React Notes",
-            "description": "Studied React fundamentals including components, props, state, and hooks. Need to practice useEffect more and understand dependency arrays better."
-        },
-        {
-            "id": 4,
-            "category": [
-                "Ideas",
-                "App",
-                "Features"
-            ],
-            "title": "Notes App Features",
-            "description": "Possible features include search, filtering by category, dark mode, localStorage persistence, and markdown support for descriptions."
-        },
-        {
-            "id": 5,
-            "category": [
-                "Health",
-                "Fitness",
-                "Workout"
-            ],
-            "title": "Workout Plan",
-            "description": "Workout at least four times a week focusing on strength training and light cardio. Track progress weekly and adjust intensity as needed."
-        }
-    ]
+  "notes": [
+    {
+      "id": "6",
+      "category": [
+        "Work",
+        "Development",
+        "Backend"
+      ],
+      "title": "API Integration Tasks",
+      "description": "Integrate the News API endpoints into the application, handle loading and error states properly, and refactor API calls into a reusable service layer."
+    },
+    {
+      "id": "8",
+      "category": [
+        "Ideas",
+        "UI",
+        "UX"
+      ],
+      "title": "UI Improvements",
+      "description": "Improve spacing, typography, and card layout. Add hover effects to news cards and ensure category chips wrap correctly on smaller screens."
+    },
+    {
+      "id": "9",
+      "category": [
+        "Personal",
+        "Productivity"
+      ],
+      "title": "Weekly Goals",
+      "description": "Set clear weekly goals, break them into smaller tasks, and review progress every Sunday to stay focused and avoid burnout."
+    }
+  ]
 }
